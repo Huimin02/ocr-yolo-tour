@@ -7,6 +7,7 @@ const useDemoKrpano = () => {
   const [isLocked, toggleLockView] = useToggle(false)
   const [isHideSpots, toggleHideSpots] = useToggle(false)
   const [currentScene, setCurrentScene] = useState('')
+
   const {
     containerRef,
     krpanoState: { isLoaded },
@@ -58,7 +59,9 @@ const useDemoKrpano = () => {
     isLocked,
     toggleHideSpots,
     isHideSpots,
+    setCurrentScene,
     currentScene,
+    callKrpano,
   }
 }
 

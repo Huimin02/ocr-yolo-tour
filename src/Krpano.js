@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import classNames from 'classnames'
 import useDemoKrpano from './hooks/useDemoKrpano'
 import './asset/demo-page.css'
-import { Box,Center } from '@chakra-ui/react'
+import { Box,Center, Button } from '@chakra-ui/react'
 
 const LoadingPage = ({ isFadingout = false }) => {
   const wrapperClasses = classNames('loading-page', {
@@ -26,7 +26,21 @@ const Krpano = () => {
     toggleHideSpots,
     isHideSpots,
     currentScene,
+    setCurrentScene,
+    callKrpano
   } = useDemoKrpano()
+
+
+  useEffect(() => {
+    
+  }, [])
+
+  function goToPano() {
+    
+    // var krpano = document.getElementById("krpanoSWFObject");
+    // callKrpano("loadpano(" + 'aerial.xml' + ", null, MERGE, BLEND(1));");
+    callKrpano("loadscene('scene_arial_(rgb)-01',null,MERGE,ZOOMBLEND(1,2,'easeInOutSine'));");
+  }
 
   return (
     <>
@@ -36,18 +50,24 @@ const Krpano = () => {
         <div ref={containerRef} />
         <div className="menu">
           <a href="/">Back to Home</a>
-          <button
+          <Button
             onClick={toggleLockView}
             className={isLocked ? 'disable' : null}
           >
             Toggle Lock View
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={toggleHideSpots}
             className={isHideSpots ? 'disable' : null}
           >
             Toggle Hide Spots
-          </button>
+          </Button>
+          <Button
+            onClick={goToPano}
+            className={isHideSpots ? 'disable' : null}
+          >
+            Go To Aerial
+          </Button>
           <div className="scene-name">Current Scene Name: {currentScene}</div>
         </div>
 
