@@ -20,7 +20,7 @@
 	               title="true"
 	               thumbs="true"
 	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
-	               thumbs_opened="false"
+	               thumbs_opened="true"
 	               thumbs_text="false"
 	               thumbs_dragging="true"
 	               thumbs_onhoverscrolling="false"
@@ -70,10 +70,10 @@
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 	<!-- <include url="skin/yolo_skin.xml" /> -->
 
-	<action name="hide_vtourskin" autorun="onstart">
+	<!-- <action name="hide_vtourskin" autorun="onstart">
 		set(layer[skin_scroll_window].visible,false);
 		set(layer[skin_control_bar].visible,false);
-	</action>
+	</action> -->
 
 	<!-- startup action - load the first scene -->
 	<action name="startup" autorun="onstart">
@@ -98,7 +98,7 @@
 		<image hfov="360.0" vfov="0.0" voffset="-21.95122" prealign="null">
 			<sphere url="panos/World_map_V3.tiles/l%l/%0v/l%l_%0v_%0h.jpg" multires="512,1024x518,2048x1034,4096x2066,8192x4130" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="85.641" atv="-3.722" linkedscene="scene_arial_(rgb)-01" />
+		<!-- <hotspot name="spot1" style="goTo" ath="85.641" atv="-3.722" linkedscene="scene_arial_(rgb)-01" /> -->
 
 	</scene>
 
@@ -113,7 +113,97 @@
 		<image hfov="1.00" vfov="0.489881" voffset="0.00">
 			<flat url="panos/arial_(rgb)-01.tiles/l%l/%v/l%l_%v_%h.jpg" multires="512,1536x752,2816x1380" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.385" atv="-0.178" distorted="false" zoom="false" linkedscene="scene_world_map_v3" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.476" atv="-0.025" distorted="false" zoom="false" linkedscene="scene_world_map_v3" />
+
+	</scene>
+
+	<scene name="scene_in_to_out_-_20_level-min" title="in to out - 20 level-min" onstart="" thumburl="panos/in_to_out_-_20_level-min.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/in_to_out_-_20_level-min.tiles/preview.jpg" />
+
+		<image hfov="1.00" vfov="0.112089" voffset="0.00">
+			<flat url="panos/in_to_out_-_20_level-min.tiles/l%l/%0v/l%l_%0v_%0h.jpg" multires="512,6400x718,12800x1436,25600x2870" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_in_to_out_-_30_level-min" title="in to out - 30 level-min" onstart="" thumburl="panos/in_to_out_-_30_level-min.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/in_to_out_-_30_level-min.tiles/preview.jpg" />
+
+		<image hfov="1.00" vfov="0.115333" voffset="0.00">
+			<flat url="panos/in_to_out_-_30_level-min.tiles/l%l/%0v/l%l_%0v_%0h.jpg" multires="512,6400x740,12800x1476,25600x2954" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_in_to_out_-_40_level-min" title="in to out - 40 level-min" onstart="" thumburl="panos/in_to_out_-_40_level-min.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/in_to_out_-_40_level-min.tiles/preview.jpg" />
+
+		<image hfov="1.00" vfov="0.114156" voffset="0.00">
+			<flat url="panos/in_to_out_-_40_level-min.tiles/l%l/%0v/l%l_%0v_%0h.jpg" multires="512,6400x732,12800x1462,25600x2922" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Gallery_A" title="Gallery A" onstart="" thumburl="panos/Gallery_A.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Gallery_A.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Gallery_A.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+		<hotspot name="spot1" style="goTo" ath="55.478" atv="25.635" linkedscene="scene_gallery_b" />
+		<hotspot name="spot2" style="goTo" ath="98.184" atv="8.175" linkedscene="scene_gallery_c" />
+
+	</scene>
+
+	<scene name="scene_Gallery_B" title="Gallery B" onstart="" thumburl="panos/Gallery_B.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Gallery_B.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Gallery_B.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+		<hotspot name="spot1" style="goTo" ath="59.158" atv="30.017" linkedscene="scene_gallery_c" />
+		<hotspot name="spot2" style="goTo" ath="102.425" atv="30.019" linkedscene="scene_gallery_a" />
+
+	</scene>
+
+	<scene name="scene_Gallery_C" title="Gallery C" onstart="" thumburl="panos/Gallery_C.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Gallery_C.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Gallery_C.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+		<hotspot name="spot1" style="goTo" ath="-103.929" atv="14.273" linkedscene="scene_gallery_a" />
+		<hotspot name="spot2" style="goTo" ath="-68.399" atv="25.658" linkedscene="scene_gallery_b" />
 
 	</scene>
 
