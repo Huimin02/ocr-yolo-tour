@@ -2,7 +2,9 @@ import React, {useEffect} from 'react'
 import classNames from 'classnames'
 import useDemoKrpano from './hooks/useDemoKrpano'
 import './asset/demo-page.css'
-import { Box,Center, Button } from '@chakra-ui/react'
+import { Box,Center, Button, HStack, VStack, Stack, Text, Image, } from '@chakra-ui/react'
+import malaysiaOff from './asset/button/01_Malaysia_1.png'
+import malaysiaOn from './asset/button/01_Malaysia_2.png'
 
 const LoadingPage = ({ isFadingout = false }) => {
   const wrapperClasses = classNames('loading-page', {
@@ -46,30 +48,77 @@ const Krpano = () => {
     <>
       {showLoadingPage && <LoadingPage isFadingout={isLoaded} />}
 
-      <Box bg="green" className="demo-page">
-        <div ref={containerRef} />
-        <div className="menu">
-          <a href="/">Back to Home</a>
-          <Button
+
+
+      <Box h="100vh" overflowX="hidden" bg="#FFD64E">
+        <Box w="100%" ref={containerRef} />
+        <HStack align="center" justify="center" bg="#FFD64E" h="8vh" w="100%" bottom="0" position="absolute" zIndex="2" >
+
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image  draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+          <Center cursor="pointer" flexDir="column" w="15%" >
+            <Image draggable={false} w="60%" src={malaysiaOff}/>
+            <Text fontSize={["0.6rem","0.6rem","1rem","1rem"]}  mt="10" pos="absolute">Malaysia</Text>
+          </Center>
+
+      
+
+
+
+        </HStack>
+        {/* <div className="menu"> */}
+          {/* <a href="/">Back to Home</a> */}
+          {/* <Button
             onClick={toggleLockView}
             className={isLocked ? 'disable' : null}
           >
             Toggle Lock View
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             onClick={toggleHideSpots}
             className={isHideSpots ? 'disable' : null}
           >
             Toggle Hide Spots
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             onClick={goToPano}
             className={isHideSpots ? 'disable' : null}
           >
             Go To Aerial
-          </Button>
-          <div className="scene-name">Current Scene Name: {currentScene}</div>
-        </div>
+          </Button> */}
+          {/* <div className="scene-name">Current Scene Name: {currentScene}</div> */}
+        {/* </div> */}
+
+
 
       </Box>
     </>

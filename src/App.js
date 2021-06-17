@@ -15,11 +15,9 @@ import Krpano from './Krpano';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
 
         <Krpano/>
 
-      </Box>
     </ChakraProvider>
   );
 }
