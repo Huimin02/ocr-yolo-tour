@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import classNames from 'classnames'
 import useDemoKrpano from './hooks/useDemoKrpano'
 import './asset/demo-page.css'
@@ -20,6 +20,8 @@ import videoOn from './asset/button/07_Video_2.png'
 import contextViewOff from './asset/button/08_ContextView_1.png'
 import contextViewOn from './asset/button/08_ContextView_2.png'
 import ocr from './asset/button/OCR_LOGO.png'
+import goBackButton from './asset/button/icon_02.png'
+
 
 
 const LoadingPage = ({ isFadingout = false }) => {
@@ -48,7 +50,15 @@ const Krpano = () => {
     callKrpano
   } = useDemoKrpano()
 
-  const [showMsiaMap, setShowMsiaMap] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  // useEffect(() => {
+ 
+  //   if(callKrpano(loadscene('scene_in_to_out_-_40_level-min',null,MERGE,ZOOMBLEND(1,2,'easeInOutSine'))) === true){
+  //     setIsOpen(true)
+  //   }
+    
+  // }, [isOpen])
 
   // function goToPano() {
     
@@ -62,11 +72,14 @@ const Krpano = () => {
     <>
       {showLoadingPage && <LoadingPage isFadingout={isLoaded} />}
 
-
-
       <Box h="100vh" overflowX="hidden" bg="#FFD64E">
         <Box w="100%" ref={containerRef} />
+
+        <Image cursor="pointer" paddingTop="45vh"  w="2.5%" src={goBackButton} onClick= {() => callKrpano("loadscene('scene_World_map_V3',null,MERGE,ZOOMBLEND(1,2,'easeInOutSine'));")}/>
+
         <HStack align="center" justify="center" bg="#FFD64E" h="7vh" w="100%" bottom="0" position="absolute" zIndex="2" >
+
+
 
 
           <Center cursor="pointer" flexDir="column" w="15%" >

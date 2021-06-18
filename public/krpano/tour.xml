@@ -103,7 +103,7 @@
 	</scene>
 
 	<scene name="scene_arial_(rgb)-01" title="arial (rgb)-01" onstart="" thumburl="panos/arial_(rgb)-01.tiles/thumb.jpg" lat="" lng="" heading="">
-		
+
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
@@ -204,6 +204,76 @@
 		</image>
 		<hotspot name="spot1" style="goTo" ath="-103.929" atv="14.273" linkedscene="scene_gallery_a" />
 		<hotspot name="spot2" style="goTo" ath="-68.399" atv="25.658" linkedscene="scene_gallery_b" />
+
+	</scene>
+
+	<scene name="scene_Bathroom" title="Bathroom" onstart="" thumburl="panos/Bathroom.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Bathroom.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Bathroom.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Living_Room" title="Living Room" onstart="" thumburl="panos/Living_Room.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Living_Room.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Living_Room.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Room_1" title="Room 1" onstart="" thumburl="panos/Room_1.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Room_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Room_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Room_2" title="Room 2" onstart="" thumburl="panos/Room_2.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Room_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Room_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_Room_3" title="Room 3" onstart="" thumburl="panos/Room_3.tiles/thumb.jpg" lat="" lng="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Room_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/Room_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280,2624" />
+		</image>
 
 	</scene>
 
